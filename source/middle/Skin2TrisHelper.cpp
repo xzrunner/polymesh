@@ -28,6 +28,14 @@ void Skin2TrisHelper::Dump(const Skin2Triangles& src,
 
 void Skin2TrisHelper::LoadFromTransform(Skin2Triangles& dst, const MeshTransform& src)
 {
+	for (int i = 0; i < dst.vert_num; ++i) {
+		const Skin2Vertex& v = dst.vertices[i];
+		for (int j = 0, m = dst.vertices_joint[i]; j < m; ++j) {
+			Skin2Joint& p = dst.joints[dst.vertices_joint[j]];
+			p.offset.Set(0, 0);
+		}
+	}
+
 	const std::vector<std::pair<int, sm::vec2> >& trans = src.GetTrans();
 	for (int i = 0, n = trans.size(); i < n; ++i) 
 	{

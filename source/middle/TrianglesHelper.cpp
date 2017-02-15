@@ -27,10 +27,11 @@ void TrianglesHelper::Dump(const Triangles& src,
 
 void TrianglesHelper::LoadFromTransform(Triangles& dst, const MeshTransform& src)
 {
-	const std::vector<std::pair<int, sm::vec2> >& trans = src.GetTrans();
-	for (int i = 0, n = trans.size(); i < n; ++i) {
-		dst.vertices[trans[i].first].xy = dst.vertices[trans[i].first].ori_xy;
+	for (int i = 0; i < dst.vert_num; ++i) {
+		dst.vertices[i].xy = dst.vertices[i].ori_xy;
 	}
+
+	const std::vector<std::pair<int, sm::vec2> >& trans = src.GetTrans();
 	for (int i = 0, n = trans.size(); i < n; ++i) {
 		dst.vertices[trans[i].first].xy += trans[i].second;
 	}
