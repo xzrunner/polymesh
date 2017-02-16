@@ -4,6 +4,8 @@
 
 #include <SM_Calc.h>
 
+#include <assert.h>
+
 namespace pm
 {
 
@@ -32,8 +34,11 @@ void TrianglesHelper::LoadFromTransform(Triangles& dst, const MeshTransform& src
 	}
 
 	const std::vector<std::pair<int, sm::vec2> >& trans = src.GetTrans();
-	for (int i = 0, n = trans.size(); i < n; ++i) {
-		dst.vertices[trans[i].first].xy += trans[i].second;
+	for (int i = 0, n = trans.size(); i < n; ++i) 
+	{
+		int idx = trans[i].first;
+		assert(idx < dst.vert_num);	
+		dst.vertices[idx].xy += trans[i].second;
 	}
 }
 
