@@ -75,12 +75,12 @@ void Skin2Mesh::Update(int offset0, int count0,
  	}
  
  	int ptr = 0;
- 	for (int i = 0; i < count0; ++i) {
- 		sm::vec2 offset(vertices[ptr++], vertices[ptr++]);
+ 	for (int i = 0; i < count0; ++i, ptr += 2) {
+ 		sm::vec2 offset(vertices[ptr], vertices[ptr+1]);
  		m_mesh_data->joints[offset0 + i].offset += offset;
  	}
- 	for (int i = 0; i < count1; ++i) {
- 		sm::vec2 offset(vertices[ptr++], vertices[ptr++]);
+ 	for (int i = 0; i < count1; ++i, ptr += 2) {
+ 		sm::vec2 offset(vertices[ptr], vertices[ptr+1]);
  		m_mesh_data->joints[offset1 + i].offset += offset;
  	}
 }
