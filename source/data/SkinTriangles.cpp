@@ -1,6 +1,8 @@
 #include "SkinTriangles.h"
 #include "pm_define.h"
 
+#include <stddef.h>
+
 namespace pm
 {
 

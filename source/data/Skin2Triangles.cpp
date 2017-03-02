@@ -3,6 +3,7 @@
 #include "pm_define.h"
 
 #include <assert.h>
+#include <stddef.h>
 
 namespace pm
 {
