@@ -23,8 +23,8 @@ SkinTriangles* SkinTriangles::Create(const std::vector<SkinVertex>& vertices,
 	
 	uint8_t* ptr = new uint8_t[sz];
 	SkinTriangles* ret = new (ptr) SkinTriangles();
-	ret->vert_num = vertices.size();
-	ret->tri_num = triangles.size();
+	ret->vert_num = static_cast<uint16_t>(vertices.size());
+	ret->tri_num = static_cast<uint16_t>(triangles.size());
 	for (int i = 0, n = vertices.size(); i < n; ++i) {
 		ret->vertices[i] = vertices[i];
 	}

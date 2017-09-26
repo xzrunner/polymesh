@@ -26,8 +26,8 @@ Triangles* Triangles::Create(const std::vector<sm::vec2>& vertices,
 
 	uint8_t* ptr = new uint8_t[sz];
 	Triangles* ret = new (ptr) Triangles();
-	ret->vert_num = vertices.size();
-	ret->tri_num = triangles.size();
+	ret->vert_num = static_cast<uint16_t>(vertices.size());
+	ret->tri_num = static_cast<uint16_t>(triangles.size());
 	for (int i = 0, n = vertices.size(); i < n; ++i) {
 		ret->vertices[i].xy = ret->vertices[i].ori_xy = vertices[i];
 		ret->vertices[i].uv = texcoords[i];

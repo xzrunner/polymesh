@@ -36,9 +36,9 @@ Skin2Triangles* Skin2Triangles::Create(const std::vector<Skin2Joint>& joints,
 	
 	uint8_t* ptr = new uint8_t[sz];
 	Skin2Triangles* ret = new (ptr) Skin2Triangles();
-	ret->joint_num = joints.size();
-	ret->vert_num  = vertices.size();
-	ret->tri_num   = triangles.size();
+	ret->joint_num = static_cast<uint16_t>(joints.size());
+	ret->vert_num  = static_cast<uint16_t>(vertices.size());
+	ret->tri_num   = static_cast<uint16_t>(triangles.size());
 	// joints
 	for (int i = 0, n = joints.size(); i < n; ++i) {
 		ret->joints[i] = joints[i];
