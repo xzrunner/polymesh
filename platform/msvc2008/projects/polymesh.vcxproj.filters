@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="data">
+      <UniqueIdentifier>{48d30456-6331-4ebe-a819-0f5a87492d77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\1.common">
+      <UniqueIdentifier>{ef14f1d5-cb7c-4fb7-bd27-d3bb2baad684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\2.skin">
+      <UniqueIdentifier>{d0999c48-9233-4fb7-be0c-614f42039b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\3.skin2">
+      <UniqueIdentifier>{ea02b7eb-324a-4869-bf71-93c6237bb1fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic">
+      <UniqueIdentifier>{8b76e38a-a84d-4090-93ef-e06a9be8312e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\3.triangles">
+      <UniqueIdentifier>{6d32c069-9e3e-47ae-8bfa-59be4879b299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\1.strip">
+      <UniqueIdentifier>{f2c353b4-d50a-4c94-898d-c85b99541872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\2.points">
+      <UniqueIdentifier>{10801382-77ff-42d7-bb3b-ba64683a40d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\4.skin">
+      <UniqueIdentifier>{2e866b59-4572-4845-b1cf-8a56a6bb7d2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\5.skin2">
+      <UniqueIdentifier>{9e5949af-dc04-4eb8-b009-abc5ae18070e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{77b750f2-cf23-487e-9e81-be424770d710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="middle">
+      <UniqueIdentifier>{519130c2-f207-4f51-ad82-5334a784ae38}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\data\MeshTransform.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data\Strips.cpp">
+      <Filter>data\1.common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data\Triangles.cpp">
+      <Filter>data\1.common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data\SkinTriangles.cpp">
+      <Filter>data\2.skin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data\SkinVertex.cpp">
+      <Filter>data\2.skin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data\Skin2Triangles.cpp">
+      <Filter>data\3.skin2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\logic\TrianglesMesh.cpp">
+      <Filter>logic\3.triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\logic\StripMesh.cpp">
+      <Filter>logic\1.strip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\logic\PointsMesh.cpp">
+      <Filter>logic\2.points</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\logic\Skin2Mesh.cpp">
+      <Filter>logic\5.skin2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\middle\Skin2TrisHelper.cpp">
+      <Filter>middle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\middle\TrianglesHelper.cpp">
+      <Filter>middle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\polymesh\MeshTransform.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Strips.h">
+      <Filter>data\1.common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Triangles.h">
+      <Filter>data\1.common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Vertex.h">
+      <Filter>data\1.common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\SkinTriangles.h">
+      <Filter>data\2.skin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\SkinVertex.h">
+      <Filter>data\2.skin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Joint.h">
+      <Filter>data\3.skin2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Triangles.h">
+      <Filter>data\3.skin2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Vertex.h">
+      <Filter>data\3.skin2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Mesh.h">
+      <Filter>logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\MeshType.h">
+      <Filter>logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\TrianglesMesh.h">
+      <Filter>logic\3.triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\StripMesh.h">
+      <Filter>logic\1.strip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\PointsMesh.h">
+      <Filter>logic\2.points</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Mesh.h">
+      <Filter>logic\5.skin2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\pm_define.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\Skin2TrisHelper.h">
+      <Filter>middle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\polymesh\TrianglesHelper.h">
+      <Filter>middle</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

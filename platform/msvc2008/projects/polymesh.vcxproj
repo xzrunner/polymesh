@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>2.polymesh</ProjectName>
+    <ProjectGuid>{748F2E41-4C8F-4C0F-A90A-26ECA6741A34}</ProjectGuid>
+    <RootNamespace>polymesh</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\polymesh\x86\Debug\</OutDir>
+    <IntDir>..\polymesh\x86\Debug\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\polymesh\x86\Release\</OutDir>
+    <IntDir>..\polymesh\x86\Release\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\include\polymesh;..\..\..\..\cu\src\cu;..\..\..\..\sm\src\sm;..\..\..\..\editor-external\c99;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\include\polymesh;..\..\..\..\cu\src\cu;..\..\..\..\sm\src\sm;..\..\..\..\editor-external\c99;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\data\MeshTransform.cpp" />
+    <ClCompile Include="..\..\..\source\data\Skin2Triangles.cpp" />
+    <ClCompile Include="..\..\..\source\data\SkinTriangles.cpp" />
+    <ClCompile Include="..\..\..\source\data\SkinVertex.cpp" />
+    <ClCompile Include="..\..\..\source\data\Strips.cpp" />
+    <ClCompile Include="..\..\..\source\data\Triangles.cpp" />
+    <ClCompile Include="..\..\..\source\logic\PointsMesh.cpp" />
+    <ClCompile Include="..\..\..\source\logic\Skin2Mesh.cpp" />
+    <ClCompile Include="..\..\..\source\logic\StripMesh.cpp" />
+    <ClCompile Include="..\..\..\source\logic\TrianglesMesh.cpp" />
+    <ClCompile Include="..\..\..\source\middle\Skin2TrisHelper.cpp" />
+    <ClCompile Include="..\..\..\source\middle\TrianglesHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\polymesh\Mesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh\MeshTransform.h" />
+    <ClInclude Include="..\..\..\include\polymesh\MeshType.h" />
+    <ClInclude Include="..\..\..\include\polymesh\pm_define.h" />
+    <ClInclude Include="..\..\..\include\polymesh\PointsMesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Joint.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Mesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Triangles.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Skin2TrisHelper.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Skin2Vertex.h" />
+    <ClInclude Include="..\..\..\include\polymesh\SkinTriangles.h" />
+    <ClInclude Include="..\..\..\include\polymesh\SkinVertex.h" />
+    <ClInclude Include="..\..\..\include\polymesh\StripMesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Strips.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Triangles.h" />
+    <ClInclude Include="..\..\..\include\polymesh\TrianglesHelper.h" />
+    <ClInclude Include="..\..\..\include\polymesh\TrianglesMesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh\Vertex.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
