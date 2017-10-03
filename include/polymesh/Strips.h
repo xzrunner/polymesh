@@ -3,7 +3,7 @@
 
 #include "Vertex.h"
 
-#include <CU_Uncopyable.h>
+#include <cu/uncopyable.h>
 
 #include <stdint.h>
 
