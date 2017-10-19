@@ -4,21 +4,16 @@
 namespace pm
 {
 
-TrianglesMesh::TrianglesMesh(const std::vector<sm::vec2>& vertices, 
-							 const std::vector<sm::vec2>& texcoords, 
-							 const std::vector<int>& triangles)
+TrianglesMesh::TrianglesMesh(const CU_VEC<sm::vec2>& vertices, 
+							 const CU_VEC<sm::vec2>& texcoords, 
+							 const CU_VEC<int>& triangles)
+	: m_mesh_data(Triangles::Create(vertices, texcoords, triangles))
 {
-	m_mesh_data = Triangles::Create(vertices, texcoords, triangles);
 }
 
-TrianglesMesh::~TrianglesMesh()
-{
-	delete m_mesh_data;
-}
-
-void TrianglesMesh::Dump(std::vector<sm::vec2>& vertices, 
-						 std::vector<sm::vec2>& texcoords, 
-						 std::vector<int>& triangles) const
+void TrianglesMesh::Dump(CU_VEC<sm::vec2>& vertices, 
+						 CU_VEC<sm::vec2>& texcoords, 
+						 CU_VEC<int>& triangles) const
 {
 	TrianglesHelper::Dump(*m_mesh_data, vertices, texcoords, triangles);
 }

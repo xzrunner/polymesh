@@ -4,22 +4,17 @@
 namespace pm
 {
 
-Skin2Mesh::Skin2Mesh(const std::vector<Skin2Joint>& joints,
-					 const std::vector<int>& vertices,
-					 const std::vector<sm::vec2>& texcoords,
-					 const std::vector<int>& triangles)
+Skin2Mesh::Skin2Mesh(const CU_VEC<Skin2Joint>& joints,
+					 const CU_VEC<int>& vertices,
+					 const CU_VEC<sm::vec2>& texcoords,
+					 const CU_VEC<int>& triangles)
+	: m_mesh_data(Skin2Triangles::Create(joints, vertices, texcoords, triangles))
 {
-	m_mesh_data = Skin2Triangles::Create(joints, vertices, texcoords, triangles);
 }
 
-Skin2Mesh::~Skin2Mesh()
-{
-	delete m_mesh_data;
-}
-
-void Skin2Mesh::Dump(std::vector<sm::vec2>& vertices, 
-					 std::vector<sm::vec2>& texcoords, 
-					 std::vector<int>& triangles) const
+void Skin2Mesh::Dump(CU_VEC<sm::vec2>& vertices, 
+					 CU_VEC<sm::vec2>& texcoords, 
+					 CU_VEC<int>& triangles) const
 {
 	Skin2TrisHelper::Dump(*m_mesh_data, vertices, texcoords, triangles);
 }

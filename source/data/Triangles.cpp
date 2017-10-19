@@ -14,9 +14,10 @@ Triangles::Triangles()
 {
 }
 
-Triangles* Triangles::Create(const std::vector<sm::vec2>& vertices, 
-							 const std::vector<sm::vec2>& texcoords, 
-							 const std::vector<int>& triangles)
+TrianglesPtr 
+Triangles::Create(const CU_VEC<sm::vec2>& vertices, 
+	              const CU_VEC<sm::vec2>& texcoords, 
+	              const CU_VEC<int>& triangles)
 {
 	assert(vertices.size() == texcoords.size());
 	int head_sz = sizeof(Triangles) + PTR_SIZE_DIFF - sizeof(Vertex);
@@ -24,7 +25,8 @@ Triangles* Triangles::Create(const std::vector<sm::vec2>& vertices,
 	sz += sizeof(Vertex) * vertices.size();			// vertices
 	sz += sizeof(uint16_t) * triangles.size();		// triangles
 
-	uint8_t* ptr = new uint8_t[sz];
+	void* buf = mm::AllocHelper::Allocate(sz);
+	uint8_t* ptr = static_cast<uint8_t*>(buf);
 	Triangles* ret = new (ptr) Triangles();
 	ret->vert_num = static_cast<uint16_t>(vertices.size());
 	ret->tri_num = static_cast<uint16_t>(triangles.size());
@@ -37,7 +39,16 @@ Triangles* Triangles::Create(const std::vector<sm::vec2>& vertices,
 		ret->triangles[i] = triangles[i];
 	}
 
-	return ret;
+	return TrianglesPtr(ret, deleter);
+}
+
+size_t Triangles::GetSize() const
+{
+	size_t head_sz = sizeof(Triangles) + PTR_SIZE_DIFF - sizeof(Vertex);
+	size_t sz = head_sz;
+	sz += sizeof(Vertex) * vert_num;			// vertices
+	sz += sizeof(uint16_t) * tri_num;			// triangles
+	return sz;
 }
 
 }

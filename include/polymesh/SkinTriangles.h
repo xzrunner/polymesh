@@ -3,7 +3,7 @@
 
 #include "SkinVertex.h"
 
-#include <vector>
+#include <cu/cu_stl.h>
 
 namespace pm
 {
@@ -19,10 +19,19 @@ public:
 public:
 	SkinTriangles();
 
-	static SkinTriangles* Create(const std::vector<SkinVertex>& vertices,
-								 const std::vector<int>& triangles);
+	static void deleter(SkinTriangles* tris) {
+		mm::AllocHelper::Free(static_cast<void*>(tris), tris->GetSize());
+	};
+	static std::unique_ptr<SkinTriangles, decltype(&deleter)> Create(
+		const CU_VEC<SkinVertex>& vertices,
+		const CU_VEC<int>& triangles);
+
+private:
+	size_t GetSize() const;
 
 }; // SkinTriangles
+
+using SkinTrianglesPtr = std::unique_ptr<SkinTriangles, decltype(&SkinTriangles::deleter)>;
 
 }
 

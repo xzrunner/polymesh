@@ -5,8 +5,7 @@
 #include "Triangles.h"
 
 #include <SM_Vector.h>
-
-#include <vector>
+#include <cu/cu_stl.h>
 
 namespace pm
 {
@@ -16,14 +15,13 @@ class Triangles;
 class PointsMesh : public Mesh
 {
 public:
-	PointsMesh(const std::vector<sm::vec2>& outline, const std::vector<sm::vec2>& points, 
+	PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points, 
 		float width, float height);
-	virtual ~PointsMesh();
 
 	virtual MeshType Type() const { return MESH_POINTS; }
 
-	virtual void Dump(std::vector<sm::vec2>& vertices, std::vector<sm::vec2>& texcoords,
-		std::vector<int>& triangles) const;
+	virtual void Dump(CU_VEC<sm::vec2>& vertices, CU_VEC<sm::vec2>& texcoords,
+		CU_VEC<int>& triangles) const;
 
 	virtual void LoadFromTransform(const MeshTransform& transform);
 	virtual void StoreToTransform(MeshTransform& transform) const;
@@ -31,21 +29,21 @@ public:
 	virtual const sm::vec2* GetVertexPos(int idx) const;
 	virtual void SetVertexPos(int idx, const sm::vec2& pos);
 
-	void Build(const std::vector<sm::vec2>& outline, const std::vector<sm::vec2>& points);
+	void Build(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points);
 	void Clear();
 
-	const std::vector<sm::vec2>& GetOutline() const { return m_outline; }
-	const std::vector<sm::vec2>& GetPoints() const { return m_points; }
+	const CU_VEC<sm::vec2>& GetOutline() const { return m_outline; }
+	const CU_VEC<sm::vec2>& GetPoints() const { return m_points; }
 
-	const Triangles* GetMeshData() const { return m_mesh_data; }
+	const TrianglesPtr& GetMeshData() const { return m_mesh_data; }
 
 private:
 	float m_width, m_height;
 
-	std::vector<sm::vec2> m_outline;
-	std::vector<sm::vec2> m_points;	
+	CU_VEC<sm::vec2> m_outline;
+	CU_VEC<sm::vec2> m_points;	
 
-	Triangles* m_mesh_data;
+	TrianglesPtr m_mesh_data;
 
 }; // PointsMesh
 

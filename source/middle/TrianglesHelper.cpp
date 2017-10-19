@@ -10,9 +10,9 @@ namespace pm
 {
 
 void TrianglesHelper::Dump(const Triangles& src, 
-						   std::vector<sm::vec2>& vertices, 
-						   std::vector<sm::vec2>& texcoords, 
-						   std::vector<int>& triangles)
+						   CU_VEC<sm::vec2>& vertices, 
+						   CU_VEC<sm::vec2>& texcoords, 
+						   CU_VEC<int>& triangles)
 {
 	vertices.resize(src.vert_num);
 	texcoords.resize(src.vert_num);
@@ -33,7 +33,7 @@ void TrianglesHelper::LoadFromTransform(Triangles& dst, const MeshTransform& src
 		dst.vertices[i].xy = dst.vertices[i].ori_xy;
 	}
 
-	const std::vector<std::pair<int, sm::vec2> >& trans = src.GetTrans();
+	const CU_VEC<std::pair<int, sm::vec2> >& trans = src.GetTrans();
 	for (int i = 0, n = trans.size(); i < n; ++i) 
 	{
 		int idx = trans[i].first;
@@ -44,7 +44,7 @@ void TrianglesHelper::LoadFromTransform(Triangles& dst, const MeshTransform& src
 
 void TrianglesHelper::StoreToTransform(MeshTransform& dst, const Triangles& src)
 {
-	std::vector<std::pair<int, sm::vec2> > trans;
+	CU_VEC<std::pair<int, sm::vec2> > trans;
 	for (int i = 0; i < src.vert_num; ++i) {
 		const Vertex& v = src.vertices[i];
 		if (v.xy != v.ori_xy) {
@@ -68,7 +68,7 @@ const Vertex* TrianglesHelper::PointQueryVertex(const Triangles& src, const sm::
 	return ret;
 }
 
-void TrianglesHelper::RectQueryVertices(const Triangles& src, const sm::rect& r, std::vector<const Vertex*>& vertices)
+void TrianglesHelper::RectQueryVertices(const Triangles& src, const sm::rect& r, CU_VEC<const Vertex*>& vertices)
 {
 	for (int i = 0; i < src.vert_num; ++i) {
 		if (sm::is_point_in_rect(src.vertices[i].xy, r)) {

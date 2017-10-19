@@ -4,7 +4,7 @@
 #include "Skin2Vertex.h"
 #include "Skin2Joint.h"
 
-#include <vector>
+#include <cu/cu_stl.h>
 
 #include <stdint.h>
 
@@ -31,12 +31,20 @@ public:
 public:
 	Skin2Triangles();
 
-	static Skin2Triangles* Create(const std::vector<Skin2Joint>& joints,
-		const std::vector<int>& vertices,
-		const std::vector<sm::vec2>& texcoords,
-		const std::vector<int>& triangles);
+	static void deleter(Skin2Triangles* tris) {
+		mm::AllocHelper::Free(static_cast<void*>(tris), tris->GetSize());
+	};
+	static std::unique_ptr<Skin2Triangles, decltype(&deleter)> Create(const CU_VEC<Skin2Joint>& joints,
+		const CU_VEC<int>& vertices,
+		const CU_VEC<sm::vec2>& texcoords,
+		const CU_VEC<int>& triangles);
+
+private:
+	size_t GetSize() const;
 
 }; // Skin2Triangles
+
+using Skin2TrianglesPtr = std::unique_ptr<Skin2Triangles, decltype(&Skin2Triangles::deleter)>;
 
 }
 

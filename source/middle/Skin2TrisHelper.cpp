@@ -8,9 +8,9 @@ namespace pm
 {
 
 void Skin2TrisHelper::Dump(const Skin2Triangles& src, 
-						   std::vector<sm::vec2>& vertices, 
-						   std::vector<sm::vec2>& texcoords, 
-						   std::vector<int>& triangles)
+						   CU_VEC<sm::vec2>& vertices, 
+						   CU_VEC<sm::vec2>& texcoords, 
+						   CU_VEC<int>& triangles)
 {
 	vertices.resize(src.vert_num);
 	texcoords.resize(src.vert_num);
@@ -36,7 +36,7 @@ void Skin2TrisHelper::LoadFromTransform(Skin2Triangles& dst, const MeshTransform
 		}
 	}
 
-	const std::vector<std::pair<int, sm::vec2> >& trans = src.GetTrans();
+	const CU_VEC<std::pair<int, sm::vec2> >& trans = src.GetTrans();
 	for (int i = 0, n = trans.size(); i < n; ++i) 
 	{
 		int vert_idx = trans[i].first;
@@ -51,7 +51,7 @@ void Skin2TrisHelper::LoadFromTransform(Skin2Triangles& dst, const MeshTransform
 
 void Skin2TrisHelper::StoreToTransform(MeshTransform& dst, const Skin2Triangles& src)
 {
-	std::vector<std::pair<int, sm::vec2> > trans;
+	CU_VEC<std::pair<int, sm::vec2> > trans;
 	for (int i = 0; i < src.vert_num; ++i)
 	{
 		const Skin2Vertex& v = src.vertices[i];
@@ -81,7 +81,7 @@ const Skin2Vertex* Skin2TrisHelper::PointQueryVertex(const Skin2Triangles& src, 
 	return ret;
 }
 
-void Skin2TrisHelper::RectQueryVertices(const Skin2Triangles& src, const sm::rect& r, std::vector<const Skin2Vertex*>& vertices)
+void Skin2TrisHelper::RectQueryVertices(const Skin2Triangles& src, const sm::rect& r, CU_VEC<const Skin2Vertex*>& vertices)
 {
 	for (int i = 0; i < src.vert_num; ++i) {
 		if (sm::is_point_in_rect(src.vertices[i].xy, r)) {

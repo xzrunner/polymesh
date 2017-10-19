@@ -3,9 +3,8 @@
 
 #include "MeshType.h"
 
+#include <cu/cu_stl.h>
 #include <SM_Vector.h>
-
-#include <vector>
 
 namespace pm
 {
@@ -19,8 +18,8 @@ public:
 
 	virtual MeshType Type() const = 0;
 
-	virtual void Dump(std::vector<sm::vec2>& vertices, std::vector<sm::vec2>& texcoords,
-		std::vector<int>& triangles) const = 0;
+	virtual void Dump(CU_VEC<sm::vec2>& vertices, CU_VEC<sm::vec2>& texcoords,
+		CU_VEC<int>& triangles) const = 0;
 
 	virtual void LoadFromTransform(const MeshTransform& transform) = 0;
 	virtual void StoreToTransform(MeshTransform& transform) const = 0;

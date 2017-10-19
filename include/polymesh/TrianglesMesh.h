@@ -5,8 +5,7 @@
 #include "Triangles.h"
 
 #include <SM_Vector.h>
-
-#include <vector>
+#include <cu/cu_stl.h>
 
 namespace pm
 {
@@ -14,14 +13,13 @@ namespace pm
 class TrianglesMesh : public Mesh
 {
 public:
-	TrianglesMesh(const std::vector<sm::vec2>& vertices, const std::vector<sm::vec2>& texcoords,
-		const std::vector<int>& triangles);
-	virtual ~TrianglesMesh();
+	TrianglesMesh(const CU_VEC<sm::vec2>& vertices, const CU_VEC<sm::vec2>& texcoords,
+		const CU_VEC<int>& triangles);
 
 	virtual MeshType Type() const { return MESH_TRIANGLES; }
 
-	virtual void Dump(std::vector<sm::vec2>& vertices, std::vector<sm::vec2>& texcoords,
-		std::vector<int>& triangles) const;
+	virtual void Dump(CU_VEC<sm::vec2>& vertices, CU_VEC<sm::vec2>& texcoords,
+		CU_VEC<int>& triangles) const;
 
 	virtual void LoadFromTransform(const MeshTransform& transform);
 	virtual void StoreToTransform(MeshTransform& transform) const;
@@ -31,10 +29,10 @@ public:
 
 	void Update(int offset0, int count0, int offset1, int count1, const float* vertices);
 
-	const Triangles* GetMeshData() const { return m_mesh_data; }
+	const TrianglesPtr& GetMeshData() const { return m_mesh_data; }
 
 private:
-	Triangles* m_mesh_data;
+	TrianglesPtr m_mesh_data;
 
 }; // TrianglesMesh
 

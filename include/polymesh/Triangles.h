@@ -3,7 +3,7 @@
 
 #include "Vertex.h"
 
-#include <vector>
+#include <cu/cu_stl.h>
 
 #include <stdint.h>
 
@@ -23,11 +23,19 @@ public:
 public:
 	Triangles();
 
-	static Triangles* Create(const std::vector<sm::vec2>& vertices, 
-		const std::vector<sm::vec2>& texcoords, 
-		const std::vector<int>& triangles);
+	static void deleter(Triangles* tris) {
+		mm::AllocHelper::Free(static_cast<void*>(tris), tris->GetSize());
+	};
+	static std::unique_ptr<Triangles, decltype(&deleter)> Create(const CU_VEC<sm::vec2>& vertices,
+		const CU_VEC<sm::vec2>& texcoords, 
+		const CU_VEC<int>& triangles);
+
+private:
+	size_t GetSize() const;
 
 }; // Triangles
+
+using TrianglesPtr = std::unique_ptr<Triangles, decltype(&Triangles::deleter)>;
 
 }
 
