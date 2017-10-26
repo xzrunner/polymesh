@@ -1,5 +1,5 @@
-#include "SkinTriangles.h"
-#include "pm_define.h"
+#include "polymesh/SkinTriangles.h"
+#include "polymesh/define.h"
 
 #include <memmgr/Allocator.h>
 

@@ -1,8 +1,8 @@
 #ifndef _POLYMESH_SKIN2_TRIANGLES_H_
 #define _POLYMESH_SKIN2_TRIANGLES_H_
 
-#include "Skin2Vertex.h"
-#include "Skin2Joint.h"
+#include "polymesh/Skin2Vertex.h"
+#include "polymesh/Skin2Joint.h"
 
 #include <cu/cu_stl.h>
 

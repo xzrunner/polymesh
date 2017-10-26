@@ -1,1 +1,1 @@
-#include "StripMesh.h"
+#include "polymesh/StripMesh.h"

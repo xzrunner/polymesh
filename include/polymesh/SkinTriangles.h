@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_SKIN_TRIANGLES_H_
 #define _POLYMESH_SKIN_TRIANGLES_H_
 
-#include "SkinVertex.h"
+#include "polymesh/SkinVertex.h"
 
 #include <cu/cu_stl.h>
 

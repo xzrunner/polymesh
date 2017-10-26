@@ -1,6 +1,6 @@
-#include "Skin2TrisHelper.h"
-#include "Skin2Triangles.h"
-#include "MeshTransform.h"
+#include "polymesh/Skin2TrisHelper.h"
+#include "polymesh/Skin2Triangles.h"
+#include "polymesh/MeshTransform.h"
 
 #include <SM_Calc.h>
 

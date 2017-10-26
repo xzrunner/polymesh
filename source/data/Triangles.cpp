@@ -1,5 +1,5 @@
-#include "Triangles.h"
-#include "pm_define.h"
+#include "polymesh/Triangles.h"
+#include "polymesh/define.h"
 
 #include <assert.h>
 #include <stddef.h>

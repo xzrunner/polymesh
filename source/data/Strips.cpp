@@ -1,4 +1,4 @@
-#include "Strips.h"
+#include "polymesh/Strips.h"
 
 namespace pm
 {

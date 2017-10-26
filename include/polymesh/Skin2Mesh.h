@@ -1,10 +1,10 @@
 #ifndef _POLYMESH_SKELETON2_MESH_H_
 #define _POLYMESH_SKELETON2_MESH_H_
 
-#include "Mesh.h"
-#include "Skin2Joint.h"
-#include "Skin2Vertex.h"
-#include "Skin2Triangles.h"
+#include "polymesh/Mesh.h"
+#include "polymesh/Skin2Joint.h"
+#include "polymesh/Skin2Vertex.h"
+#include "polymesh/Skin2Triangles.h"
 
 #include <cu/cu_stl.h>
 

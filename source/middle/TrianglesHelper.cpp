@@ -1,6 +1,6 @@
-#include "TrianglesHelper.h"
-#include "Triangles.h"
-#include "MeshTransform.h"
+#include "polymesh/TrianglesHelper.h"
+#include "polymesh/Triangles.h"
+#include "polymesh/MeshTransform.h"
 
 #include <SM_Calc.h>
 

@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_MESH_H_
 #define _POLYMESH_MESH_H_
 
-#include "MeshType.h"
+#include "polymesh/MeshType.h"
 
 #include <cu/cu_stl.h>
 #include <SM_Vector.h>

@@ -1,5 +1,5 @@
-#include "TrianglesMesh.h"
-#include "TrianglesHelper.h"
+#include "polymesh/TrianglesMesh.h"
+#include "polymesh/TrianglesHelper.h"
 
 namespace pm
 {

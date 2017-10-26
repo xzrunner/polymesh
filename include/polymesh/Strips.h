@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_STRIPS_H_
 #define _POLYMESH_STRIPS_H_
 
-#include "Vertex.h"
+#include "polymesh/Vertex.h"
 
 #include <cu/uncopyable.h>
 

@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_TRIANGLES_H_
 #define _POLYMESH_TRIANGLES_H_
 
-#include "Vertex.h"
+#include "polymesh/Vertex.h"
 
 #include <cu/cu_stl.h>
 

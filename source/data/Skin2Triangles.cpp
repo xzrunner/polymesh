@@ -1,6 +1,6 @@
-#include "Skin2Triangles.h"
-#include "MeshTransform.h"
-#include "pm_define.h"
+#include "polymesh/Skin2Triangles.h"
+#include "polymesh/MeshTransform.h"
+#include "polymesh/define.h"
 
 #include <memmgr/Allocator.h>
 

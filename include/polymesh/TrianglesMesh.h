@@ -1,8 +1,8 @@
 #ifndef _POLYMESH_TRIANGLES_MESH_H_
 #define _POLYMESH_TRIANGLES_MESH_H_
 
-#include "Mesh.h"
-#include "Triangles.h"
+#include "polymesh/Mesh.h"
+#include "polymesh/Triangles.h"
 
 #include <SM_Vector.h>
 #include <cu/cu_stl.h>

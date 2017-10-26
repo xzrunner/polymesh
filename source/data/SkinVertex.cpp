@@ -1,4 +1,4 @@
-#include "SkinVertex.h"
+#include "polymesh/SkinVertex.h"
 
 #include <string.h>
 

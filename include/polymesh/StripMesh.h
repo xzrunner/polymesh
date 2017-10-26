@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_STRIP_MESH_H_
 #define _POLYMESH_STRIP_MESH_H_
 
-#include "Mesh.h"
+#include "polymesh/Mesh.h"
 
 namespace pm
 {

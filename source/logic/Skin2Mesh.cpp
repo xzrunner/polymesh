@@ -1,5 +1,5 @@
-#include "Skin2Mesh.h"
-#include "Skin2TrisHelper.h"
+#include "polymesh/Skin2Mesh.h"
+#include "polymesh/Skin2TrisHelper.h"
 
 namespace pm
 {

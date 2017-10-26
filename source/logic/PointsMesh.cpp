@@ -1,5 +1,5 @@
-#include "PointsMesh.h"
-#include "TrianglesHelper.h"
+#include "polymesh/PointsMesh.h"
+#include "polymesh/TrianglesHelper.h"
 
 #include <SM_Triangulation.h>
 
