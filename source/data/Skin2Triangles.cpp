@@ -14,8 +14,8 @@ Skin2Triangles::Skin2Triangles()
 	: joint_num(0)
 	, vert_num(0)
 	, tri_num(0)
-	, vertices(NULL)
-	, triangles(NULL)
+	, vertices(nullptr)
+	, triangles(nullptr)
 {
 }
 

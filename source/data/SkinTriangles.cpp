@@ -11,7 +11,7 @@ namespace pm
 SkinTriangles::SkinTriangles()
 	: vert_num(0)
 	, tri_num(0)
-	, triangles(NULL)
+	, triangles(nullptr)
 {
 }
 

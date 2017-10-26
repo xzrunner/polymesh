@@ -56,7 +56,7 @@ void TrianglesHelper::StoreToTransform(MeshTransform& dst, const Triangles& src)
 
 const Vertex* TrianglesHelper::PointQueryVertex(const Triangles& src, const sm::vec2& p, float radius)
 {
-	const Vertex* ret = NULL;
+	const Vertex* ret = nullptr;
 	float nearest = FLT_MAX;
 	for (int i = 0; i < src.vert_num; ++i) {
 		float dis = sm::dis_pos_to_pos(src.vertices[i].xy, p);
@@ -80,7 +80,7 @@ void TrianglesHelper::RectQueryVertices(const Triangles& src, const sm::rect& r,
 const sm::vec2* TrianglesHelper::GetVertexPos(const Triangles& src, int idx)
 {
 	if (idx < 0 || idx >= src.vert_num) {
-		return NULL;
+		return nullptr;
 	} else {
 		return &src.vertices[idx].xy;
 	}

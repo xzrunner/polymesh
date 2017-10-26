@@ -69,7 +69,7 @@ void Skin2TrisHelper::StoreToTransform(MeshTransform& dst, const Skin2Triangles&
 
 const Skin2Vertex* Skin2TrisHelper::PointQueryVertex(const Skin2Triangles& src, const sm::vec2& p, float radius)
 {
-	const Skin2Vertex* ret = NULL;
+	const Skin2Vertex* ret = nullptr;
 	float nearest = FLT_MAX;
 	for (int i = 0; i < src.vert_num; ++i) {
 		float dis = sm::dis_pos_to_pos(src.vertices[i].xy, p);
@@ -93,7 +93,7 @@ void Skin2TrisHelper::RectQueryVertices(const Skin2Triangles& src, const sm::rec
 const sm::vec2* Skin2TrisHelper::GetVertexPos(const Skin2Triangles& src, int idx)
 {
 	if (idx < 0 || idx >= src.vert_num) {
-		return NULL;
+		return nullptr;
 	} else {
 		return &src.vertices[idx].xy;
 	}
