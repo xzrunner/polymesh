@@ -18,16 +18,16 @@ public:
 	PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points, 
 		float width, float height);
 
-	virtual MeshType Type() const { return MESH_POINTS; }
+	virtual MeshType Type() const override { return MESH_POINTS; }
 
 	virtual void Dump(CU_VEC<sm::vec2>& vertices, CU_VEC<sm::vec2>& texcoords,
-		CU_VEC<int>& triangles) const;
+		CU_VEC<int>& triangles) const override;
 
-	virtual void LoadFromTransform(const MeshTransform& transform);
-	virtual void StoreToTransform(MeshTransform& transform) const;
+	virtual void LoadFromTransform(const MeshTransform& transform) override;
+	virtual void StoreToTransform(MeshTransform& transform) const override;
 
-	virtual const sm::vec2* GetVertexPos(int idx) const;
-	virtual void SetVertexPos(int idx, const sm::vec2& pos);
+	virtual const sm::vec2* GetVertexPos(int idx) const override;
+	virtual void SetVertexPos(int idx, const sm::vec2& pos) override;
 
 	void Build(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points);
 	void Clear();

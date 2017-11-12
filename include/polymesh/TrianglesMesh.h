@@ -16,16 +16,16 @@ public:
 	TrianglesMesh(const CU_VEC<sm::vec2>& vertices, const CU_VEC<sm::vec2>& texcoords,
 		const CU_VEC<int>& triangles);
 
-	virtual MeshType Type() const { return MESH_TRIANGLES; }
+	virtual MeshType Type() const override { return MESH_TRIANGLES; }
 
 	virtual void Dump(CU_VEC<sm::vec2>& vertices, CU_VEC<sm::vec2>& texcoords,
-		CU_VEC<int>& triangles) const;
+		CU_VEC<int>& triangles) const override;
 
-	virtual void LoadFromTransform(const MeshTransform& transform);
-	virtual void StoreToTransform(MeshTransform& transform) const;
+	virtual void LoadFromTransform(const MeshTransform& transform) override;
+	virtual void StoreToTransform(MeshTransform& transform) const override;
 
-	virtual const sm::vec2* GetVertexPos(int idx) const;
-	virtual void SetVertexPos(int idx, const sm::vec2& pos);
+	virtual const sm::vec2* GetVertexPos(int idx) const override;
+	virtual void SetVertexPos(int idx, const sm::vec2& pos) override;
 
 	void Update(int offset0, int count0, int offset1, int count1, const float* vertices);
 

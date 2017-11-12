@@ -11,7 +11,7 @@ class StripMesh : public Mesh
 public:
 	StripMesh() {}
 
-	virtual MeshType Type() const { return MESH_STRIP; }
+	virtual MeshType Type() const override { return MESH_STRIP; }
 	
 private:
 

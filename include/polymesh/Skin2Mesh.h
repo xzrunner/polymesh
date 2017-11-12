@@ -19,16 +19,16 @@ public:
 	Skin2Mesh(const CU_VEC<Skin2Joint>& joints, const CU_VEC<int>& vertices,
 		const CU_VEC<sm::vec2>& texcoords, const CU_VEC<int>& triangles);
 
-	virtual MeshType Type() const { return MESH_SKIN2; }
+	virtual MeshType Type() const override { return MESH_SKIN2; }
 
 	virtual void Dump(CU_VEC<sm::vec2>& vertices, CU_VEC<sm::vec2>& texcoords,
-		CU_VEC<int>& triangles) const;
+		CU_VEC<int>& triangles) const override;
 
-	virtual void LoadFromTransform(const MeshTransform& transform);
-	virtual void StoreToTransform(MeshTransform& transform) const;
+	virtual void LoadFromTransform(const MeshTransform& transform) override;
+	virtual void StoreToTransform(MeshTransform& transform) const override;
 
-	virtual const sm::vec2* GetVertexPos(int idx) const;
-	virtual void SetVertexPos(int idx, const sm::vec2& pos);
+	virtual const sm::vec2* GetVertexPos(int idx) const override;
+	virtual void SetVertexPos(int idx, const sm::vec2& pos) override;
 
 	void Update(const float* (*query_joint_world_mt)(int joint_id, const void* ud), const void* ud);
 	void Update(int offset0, int count0, int offset1, int count1, const float* vertices);
