@@ -5,6 +5,8 @@
 
 #include <cu/cu_stl.h>
 
+#include <memory>
+
 namespace pm
 {
 
@@ -19,9 +21,15 @@ public:
 public:
 	SkinTriangles();
 
+#ifdef USE_MM_ALLOCATOR
 	static void deleter(SkinTriangles* tris) {
 		mm::AllocHelper::Free(static_cast<void*>(tris), tris->GetSize());
 	};
+#else
+	static void deleter(SkinTriangles* tris) {
+		delete[] reinterpret_cast<uint8_t*>(tris);
+	};
+#endif // USE_MM_ALLOCATOR
 	static std::unique_ptr<SkinTriangles, decltype(&deleter)> Create(
 		const CU_VEC<SkinVertex>& vertices,
 		const CU_VEC<int>& triangles);

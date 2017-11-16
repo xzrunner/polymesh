@@ -5,6 +5,8 @@
 
 #include <cu/cu_stl.h>
 
+#include <memory>
+
 #include <stdint.h>
 
 namespace pm
@@ -23,9 +25,15 @@ public:
 public:
 	Triangles();
 
+#ifdef USE_MM_ALLOCATOR
 	static void deleter(Triangles* tris) {
 		mm::AllocHelper::Free(static_cast<void*>(tris), tris->GetSize());
 	};
+#else
+	static void deleter(Triangles* tris) {
+		delete[] reinterpret_cast<uint8_t*>(tris);
+	};
+#endif // USE_MM_ALLOCATOR
 	static std::unique_ptr<Triangles, decltype(&deleter)> Create(const CU_VEC<sm::vec2>& vertices,
 		const CU_VEC<sm::vec2>& texcoords, 
 		const CU_VEC<int>& triangles);

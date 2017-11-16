@@ -25,7 +25,11 @@ Triangles::Create(const CU_VEC<sm::vec2>& vertices,
 	sz += sizeof(Vertex) * vertices.size();			// vertices
 	sz += sizeof(uint16_t) * triangles.size();		// triangles
 
+#ifdef USE_MM_ALLOCATOR	
 	void* buf = mm::AllocHelper::Allocate(sz);
+#else
+	void* buf = new uint8_t[sz];
+#endif // USE_MM_ALLOCATOR
 	uint8_t* ptr = static_cast<uint8_t*>(buf);
 	Triangles* ret = new (ptr) Triangles();
 	ret->vert_num = static_cast<uint16_t>(vertices.size());
