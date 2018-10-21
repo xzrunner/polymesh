@@ -15,14 +15,14 @@ SkinTriangles::SkinTriangles()
 {
 }
 
-SkinTrianglesPtr 
+SkinTrianglesPtr
 SkinTriangles::Create(const CU_VEC<SkinVertex>& vertices, const CU_VEC<int>& triangles)
 {
 	int head_sz = sizeof(SkinTriangles) + PTR_SIZE_DIFF - sizeof(SkinVertex);
 	int sz = head_sz;
 	sz += sizeof(SkinVertex) * vertices.size();		// vertices
 	sz += sizeof(uint16_t) * triangles.size();		// triangles
-	
+
 #ifdef USE_MM_ALLOCATOR
 	void* buf = mm::AllocHelper::Allocate(sz);
 #else

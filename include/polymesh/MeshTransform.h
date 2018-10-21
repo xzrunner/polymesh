@@ -9,7 +9,7 @@ namespace pm
 
 class MeshTransform
 {
-public:	
+public:
 	void Lerp(const MeshTransform& begin, const MeshTransform& end, float process);
 
 	const CU_VEC<std::pair<int, sm::vec2> >& GetTrans() const { return m_trans; }

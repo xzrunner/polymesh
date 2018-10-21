@@ -7,16 +7,16 @@
 namespace pm
 {
 
-Triangles::Triangles() 
+Triangles::Triangles()
 	: vert_num(0)
 	, tri_num(0)
 	, triangles(nullptr)
 {
 }
 
-TrianglesPtr 
-Triangles::Create(const CU_VEC<sm::vec2>& vertices, 
-	              const CU_VEC<sm::vec2>& texcoords, 
+TrianglesPtr
+Triangles::Create(const CU_VEC<sm::vec2>& vertices,
+	              const CU_VEC<sm::vec2>& texcoords,
 	              const CU_VEC<int>& triangles)
 {
 	assert(vertices.size() == texcoords.size());
@@ -25,7 +25,7 @@ Triangles::Create(const CU_VEC<sm::vec2>& vertices,
 	sz += sizeof(Vertex) * vertices.size();			// vertices
 	sz += sizeof(uint16_t) * triangles.size();		// triangles
 
-#ifdef USE_MM_ALLOCATOR	
+#ifdef USE_MM_ALLOCATOR
 	void* buf = mm::AllocHelper::Allocate(sz);
 #else
 	void* buf = new uint8_t[sz];

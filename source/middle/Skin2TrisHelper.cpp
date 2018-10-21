@@ -7,9 +7,9 @@
 namespace pm
 {
 
-void Skin2TrisHelper::Dump(const Skin2Triangles& src, 
-						   CU_VEC<sm::vec2>& vertices, 
-						   CU_VEC<sm::vec2>& texcoords, 
+void Skin2TrisHelper::Dump(const Skin2Triangles& src,
+						   CU_VEC<sm::vec2>& vertices,
+						   CU_VEC<sm::vec2>& texcoords,
 						   CU_VEC<int>& triangles)
 {
 	vertices.resize(src.vert_num);
@@ -37,7 +37,7 @@ void Skin2TrisHelper::LoadFromTransform(Skin2Triangles& dst, const MeshTransform
 	}
 
 	const CU_VEC<std::pair<int, sm::vec2> >& trans = src.GetTrans();
-	for (int i = 0, n = trans.size(); i < n; ++i) 
+	for (int i = 0, n = trans.size(); i < n; ++i)
 	{
 		int vert_idx = trans[i].first;
 		const sm::vec2& offset = trans[i].second;

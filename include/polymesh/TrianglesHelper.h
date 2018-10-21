@@ -15,7 +15,7 @@ class MeshTransform;
 class TrianglesHelper
 {
 public:
-	static void Dump(const Triangles& src, CU_VEC<sm::vec2>& vertices, 
+	static void Dump(const Triangles& src, CU_VEC<sm::vec2>& vertices,
 		CU_VEC<sm::vec2>& texcoords, CU_VEC<int>& triangles);
 
 	static void LoadFromTransform(Triangles& dst, const MeshTransform& src);

@@ -14,8 +14,8 @@ class MeshTransform;
 
 class Skin2TrisHelper
 {
-public:	
-	static void Dump(const Skin2Triangles& src, CU_VEC<sm::vec2>& vertices, 
+public:
+	static void Dump(const Skin2Triangles& src, CU_VEC<sm::vec2>& vertices,
 		CU_VEC<sm::vec2>& texcoords, CU_VEC<int>& triangles);
 
 	static void LoadFromTransform(Skin2Triangles& dst, const MeshTransform& src);

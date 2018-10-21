@@ -12,8 +12,8 @@ Skin2Mesh::Skin2Mesh(const CU_VEC<Skin2Joint>& joints,
 {
 }
 
-void Skin2Mesh::Dump(CU_VEC<sm::vec2>& vertices, 
-					 CU_VEC<sm::vec2>& texcoords, 
+void Skin2Mesh::Dump(CU_VEC<sm::vec2>& vertices,
+					 CU_VEC<sm::vec2>& texcoords,
 					 CU_VEC<int>& triangles) const
 {
 	Skin2TrisHelper::Dump(*m_mesh_data, vertices, texcoords, triangles);
@@ -46,7 +46,7 @@ void Skin2Mesh::Update(const float* (*query_joint_world_mt)(int joint_id, const 
 	{
 		sm::vec2 new_xy(0, 0);
 		Skin2Vertex& vertex = m_mesh_data->vertices[i];
-		for (int j = 0, m = m_mesh_data->vertices_joint[i]; j < m; ++j) 
+		for (int j = 0, m = m_mesh_data->vertices_joint[i]; j < m; ++j)
 		{
 			const Skin2Joint& joint = m_mesh_data->joints[idx++];
 			const float* mat = query_joint_world_mt(joint.joint, ud);
@@ -58,8 +58,8 @@ void Skin2Mesh::Update(const float* (*query_joint_world_mt)(int joint_id, const 
 	}
 }
 
-void Skin2Mesh::Update(int offset0, int count0, 
-						   int offset1, int count1, 
+void Skin2Mesh::Update(int offset0, int count0,
+						   int offset1, int count1,
 						   const float* vertices)
 {
  	for (int i = 0; i < count0; ++i) {
@@ -68,7 +68,7 @@ void Skin2Mesh::Update(int offset0, int count0,
  	for (int i = 0; i < count1; ++i) {
  		m_mesh_data->joints[offset1 + i].offset.Set(0, 0);
  	}
- 
+
  	int ptr = 0;
  	for (int i = 0; i < count0; ++i, ptr += 2) {
  		sm::vec2 offset(vertices[ptr], vertices[ptr+1]);

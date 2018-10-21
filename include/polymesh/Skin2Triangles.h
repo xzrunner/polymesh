@@ -28,7 +28,7 @@ public:
 
 	uint16_t*    triangles;
 
-	Skin2Joint   joints[1];	
+	Skin2Joint   joints[1];
 
 public:
 	Skin2Triangles();

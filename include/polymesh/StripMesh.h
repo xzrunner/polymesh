@@ -12,7 +12,7 @@ public:
 	StripMesh() {}
 
 	virtual MeshType Type() const override { return MESH_STRIP; }
-	
+
 private:
 
 }; // StripMesh

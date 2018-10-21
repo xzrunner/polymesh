@@ -34,7 +34,7 @@ Skin2Triangles::Create(const CU_VEC<Skin2Joint>& joints, const CU_VEC<int>& vert
 	sz += sizeof(uint16_t) * vertices.size();
 	// triangles
 	sz += sizeof(uint16_t) * triangles.size();
-	
+
 #ifdef USE_MM_ALLOCATOR
 	void* buf = mm::AllocHelper::Allocate(sz);
 #else

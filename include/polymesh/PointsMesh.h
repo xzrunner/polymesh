@@ -15,7 +15,7 @@ class Triangles;
 class PointsMesh : public Mesh
 {
 public:
-	PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points, 
+	PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points,
 		float width, float height);
 
 	virtual MeshType Type() const override { return MESH_POINTS; }
@@ -41,7 +41,7 @@ private:
 	float m_width, m_height;
 
 	CU_VEC<sm::vec2> m_outline;
-	CU_VEC<sm::vec2> m_points;	
+	CU_VEC<sm::vec2> m_points;
 
 	TrianglesPtr m_mesh_data;
 

@@ -35,7 +35,7 @@ public:
 	};
 #endif // USE_MM_ALLOCATOR
 	static std::unique_ptr<Triangles, decltype(&deleter)> Create(const CU_VEC<sm::vec2>& vertices,
-		const CU_VEC<sm::vec2>& texcoords, 
+		const CU_VEC<sm::vec2>& texcoords,
 		const CU_VEC<int>& triangles);
 
 private:

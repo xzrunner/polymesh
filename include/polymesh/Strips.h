@@ -14,10 +14,10 @@ class Strips : private cu::Uncopyable
 {
 public:
 	uint16_t  num;
-	uint16_t  padding;	
+	uint16_t  padding;
 	uint16_t* strip_num;
 	Vertex    vertices[1];
-	
+
 }; // Strips
 
 }

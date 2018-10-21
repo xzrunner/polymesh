@@ -6,7 +6,7 @@
 namespace pm
 {
 
-PointsMesh::PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points, 
+PointsMesh::PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points,
 					   float width, float height)
 	: m_width(width)
 	, m_height(height)
@@ -15,8 +15,8 @@ PointsMesh::PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& 
 	Build(outline, points);
 }
 
-void PointsMesh::Dump(CU_VEC<sm::vec2>& vertices, 
-					  CU_VEC<sm::vec2>& texcoords, 
+void PointsMesh::Dump(CU_VEC<sm::vec2>& vertices,
+					  CU_VEC<sm::vec2>& texcoords,
 					  CU_VEC<int>& triangles) const
 {
 	TrianglesHelper::Dump(*m_mesh_data, vertices, texcoords, triangles);

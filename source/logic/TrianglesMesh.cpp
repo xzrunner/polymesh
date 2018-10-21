@@ -4,15 +4,15 @@
 namespace pm
 {
 
-TrianglesMesh::TrianglesMesh(const CU_VEC<sm::vec2>& vertices, 
-							 const CU_VEC<sm::vec2>& texcoords, 
+TrianglesMesh::TrianglesMesh(const CU_VEC<sm::vec2>& vertices,
+							 const CU_VEC<sm::vec2>& texcoords,
 							 const CU_VEC<int>& triangles)
 	: m_mesh_data(Triangles::Create(vertices, texcoords, triangles))
 {
 }
 
-void TrianglesMesh::Dump(CU_VEC<sm::vec2>& vertices, 
-						 CU_VEC<sm::vec2>& texcoords, 
+void TrianglesMesh::Dump(CU_VEC<sm::vec2>& vertices,
+						 CU_VEC<sm::vec2>& texcoords,
 						 CU_VEC<int>& triangles) const
 {
 	TrianglesHelper::Dump(*m_mesh_data, vertices, texcoords, triangles);
@@ -38,8 +38,8 @@ void TrianglesMesh::SetVertexPos(int idx, const sm::vec2& pos)
 	TrianglesHelper::SetVertexPos(*m_mesh_data, idx, pos);
 }
 
-void TrianglesMesh::Update(int offset0, int count0, 
-						   int offset1, int count1, 
+void TrianglesMesh::Update(int offset0, int count0,
+						   int offset1, int count1,
 						   const float* vertices)
 {
 	for (int i = 0; i < count0; ++i) {

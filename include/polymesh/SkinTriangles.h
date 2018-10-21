@@ -17,7 +17,7 @@ public:
 	uint16_t   tri_num;
 	uint16_t*  triangles;
 	SkinVertex vertices[1];
-	
+
 public:
 	SkinTriangles();
 
