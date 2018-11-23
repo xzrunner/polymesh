@@ -69,4 +69,14 @@ void PointsMesh::Clear()
 	m_mesh_data.reset();
 }
 
+void PointsMesh::SetOuterLine(const CU_VEC<sm::vec2>& outline)
+{
+	Build(outline, m_points);
+}
+
+void PointsMesh::SetInnerPoints(const CU_VEC<sm::vec2>& points)
+{
+	Build(m_outline, points);
+}
+
 }

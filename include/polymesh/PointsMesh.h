@@ -34,6 +34,8 @@ public:
 
 	const CU_VEC<sm::vec2>& GetOutline() const { return m_outline; }
 	const CU_VEC<sm::vec2>& GetPoints() const { return m_points; }
+	void SetOuterLine(const CU_VEC<sm::vec2>& outline);
+	void SetInnerPoints(const CU_VEC<sm::vec2>& points);
 
 	const TrianglesPtr& GetMeshData() const { return m_mesh_data; }
 
