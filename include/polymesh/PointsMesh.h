@@ -32,8 +32,8 @@ public:
 	void Build(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points);
 	void Clear();
 
-	const CU_VEC<sm::vec2>& GetOutline() const { return m_outline; }
-	const CU_VEC<sm::vec2>& GetPoints() const { return m_points; }
+	const CU_VEC<sm::vec2>& GetOuterLine() const { return m_outline; }
+	const CU_VEC<sm::vec2>& GetInnerPoints() const { return m_points; }
 	void SetOuterLine(const CU_VEC<sm::vec2>& outline);
 	void SetInnerPoints(const CU_VEC<sm::vec2>& points);
 
