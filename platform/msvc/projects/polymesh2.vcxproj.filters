@@ -77,58 +77,58 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\polymesh\MeshTransform.h">
+    <ClInclude Include="..\..\..\include\polymesh2\MeshTransform.h">
       <Filter>data</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Strips.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Strips.h">
       <Filter>data\1.common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Triangles.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Triangles.h">
       <Filter>data\1.common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Vertex.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Vertex.h">
       <Filter>data\1.common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\SkinTriangles.h">
+    <ClInclude Include="..\..\..\include\polymesh2\SkinTriangles.h">
       <Filter>data\2.skin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\SkinVertex.h">
+    <ClInclude Include="..\..\..\include\polymesh2\SkinVertex.h">
       <Filter>data\2.skin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Joint.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Joint.h">
       <Filter>data\3.skin2</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Triangles.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Triangles.h">
       <Filter>data\3.skin2</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Vertex.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Vertex.h">
       <Filter>data\3.skin2</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Mesh.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Mesh.h">
       <Filter>logic</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\MeshType.h">
+    <ClInclude Include="..\..\..\include\polymesh2\MeshType.h">
       <Filter>logic</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\TrianglesMesh.h">
+    <ClInclude Include="..\..\..\include\polymesh2\TrianglesMesh.h">
       <Filter>logic\3.triangles</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\StripMesh.h">
+    <ClInclude Include="..\..\..\include\polymesh2\StripMesh.h">
       <Filter>logic\1.strip</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\PointsMesh.h">
+    <ClInclude Include="..\..\..\include\polymesh2\PointsMesh.h">
       <Filter>logic\2.points</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Mesh.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Mesh.h">
       <Filter>logic\5.skin2</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\pm_define.h">
+    <ClInclude Include="..\..\..\include\polymesh2\pm_define.h">
       <Filter>utility</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\Skin2TrisHelper.h">
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2TrisHelper.h">
       <Filter>middle</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\polymesh\TrianglesHelper.h">
+    <ClInclude Include="..\..\..\include\polymesh2\TrianglesHelper.h">
       <Filter>middle</Filter>
     </ClInclude>
   </ItemGroup>

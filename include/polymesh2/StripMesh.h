@@ -1,9 +1,9 @@
 #ifndef _POLYMESH_STRIP_MESH_H_
 #define _POLYMESH_STRIP_MESH_H_
 
-#include "polymesh/Mesh.h"
+#include "polymesh2/Mesh.h"
 
-namespace pm
+namespace pm2
 {
 
 class StripMesh : public Mesh

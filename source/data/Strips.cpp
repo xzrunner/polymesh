@@ -1,6 +1,6 @@
-#include "polymesh/Strips.h"
+#include "polymesh2/Strips.h"
 
-namespace pm
+namespace pm2
 {
 
 

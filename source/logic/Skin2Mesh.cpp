@@ -1,7 +1,7 @@
-#include "polymesh/Skin2Mesh.h"
-#include "polymesh/Skin2TrisHelper.h"
+#include "polymesh2/Skin2Mesh.h"
+#include "polymesh2/Skin2TrisHelper.h"
 
-namespace pm
+namespace pm2
 {
 
 Skin2Mesh::Skin2Mesh(const CU_VEC<Skin2Joint>& joints,

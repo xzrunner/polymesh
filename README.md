@@ -1,3 +1,3 @@
-# polymesh
+# polymesh2
 
-Polygon Mesh
+2D polygon mesh

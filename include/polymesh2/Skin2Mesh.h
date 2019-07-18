@@ -1,14 +1,14 @@
 #ifndef _POLYMESH_SKELETON2_MESH_H_
 #define _POLYMESH_SKELETON2_MESH_H_
 
-#include "polymesh/Mesh.h"
-#include "polymesh/Skin2Joint.h"
-#include "polymesh/Skin2Vertex.h"
-#include "polymesh/Skin2Triangles.h"
+#include "polymesh2/Mesh.h"
+#include "polymesh2/Skin2Joint.h"
+#include "polymesh2/Skin2Vertex.h"
+#include "polymesh2/Skin2Triangles.h"
 
 #include <cu/cu_stl.h>
 
-namespace pm
+namespace pm2
 {
 
 class Skin2Triangles;

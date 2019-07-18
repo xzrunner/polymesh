@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_TRIANGLES_H_
 #define _POLYMESH_TRIANGLES_H_
 
-#include "polymesh/Vertex.h"
+#include "polymesh2/Vertex.h"
 
 #include <cu/cu_stl.h>
 
@@ -9,7 +9,7 @@
 
 #include <stdint.h>
 
-namespace pm
+namespace pm2
 {
 
 class MeshTransform;

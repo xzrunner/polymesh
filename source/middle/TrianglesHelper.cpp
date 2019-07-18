@@ -1,12 +1,12 @@
-#include "polymesh/TrianglesHelper.h"
-#include "polymesh/Triangles.h"
-#include "polymesh/MeshTransform.h"
+#include "polymesh2/TrianglesHelper.h"
+#include "polymesh2/Triangles.h"
+#include "polymesh2/MeshTransform.h"
 
 #include <SM_Calc.h>
 
 #include <assert.h>
 
-namespace pm
+namespace pm2
 {
 
 void TrianglesHelper::Dump(const Triangles& src,

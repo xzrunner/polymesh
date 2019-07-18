@@ -1,10 +1,10 @@
-#include "polymesh/Triangles.h"
-#include "polymesh/define.h"
+#include "polymesh2/Triangles.h"
+#include "polymesh2/define.h"
 
 #include <assert.h>
 #include <stddef.h>
 
-namespace pm
+namespace pm2
 {
 
 Triangles::Triangles()

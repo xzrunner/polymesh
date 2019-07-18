@@ -1,9 +1,9 @@
-#include "polymesh/PointsMesh.h"
-#include "polymesh/TrianglesHelper.h"
+#include "polymesh2/PointsMesh.h"
+#include "polymesh2/TrianglesHelper.h"
 
 #include <SM_Triangulation.h>
 
-namespace pm
+namespace pm2
 {
 
 PointsMesh::PointsMesh(const CU_VEC<sm::vec2>& outline, const CU_VEC<sm::vec2>& points,

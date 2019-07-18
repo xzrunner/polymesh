@@ -1,7 +1,7 @@
-#include "polymesh/TrianglesMesh.h"
-#include "polymesh/TrianglesHelper.h"
+#include "polymesh2/TrianglesMesh.h"
+#include "polymesh2/TrianglesHelper.h"
 
-namespace pm
+namespace pm2
 {
 
 TrianglesMesh::TrianglesMesh(const CU_VEC<sm::vec2>& vertices,

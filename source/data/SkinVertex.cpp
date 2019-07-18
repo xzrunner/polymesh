@@ -1,8 +1,8 @@
-#include "polymesh/SkinVertex.h"
+#include "polymesh2/SkinVertex.h"
 
 #include <string.h>
 
-namespace pm
+namespace pm2
 {
 
 SkinVertex::SkinVertex()

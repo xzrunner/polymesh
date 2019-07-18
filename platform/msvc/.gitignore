@@ -1,5 +1,5 @@
-polymesh/
+polymesh2/
 projects/*
 
-!projects/polymesh.vcxproj
-!projects/polymesh.vcxproj.filters
+!projects/polymesh2.vcxproj
+!projects/polymesh2.vcxproj.filters

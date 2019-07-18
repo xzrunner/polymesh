@@ -1,6 +1,6 @@
-#include "polymesh/MeshTransform.h"
+#include "polymesh2/MeshTransform.h"
 
-namespace pm
+namespace pm2
 {
 
 void MeshTransform::Lerp(const MeshTransform& begin, const MeshTransform& end, float process)

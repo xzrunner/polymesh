@@ -5,7 +5,7 @@
 #include <SM_Rect.h>
 #include <cu/cu_stl.h>
 
-namespace pm
+namespace pm2
 {
 
 class Vertex;

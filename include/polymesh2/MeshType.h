@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_MESH_TYPE_H_
 #define _POLYMESH_MESH_TYPE_H_
 
-namespace pm
+namespace pm2
 {
 
 enum MeshType

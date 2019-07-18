@@ -5,7 +5,7 @@
 
 #include <stdint.h>
 
-namespace pm
+namespace pm2
 {
 
 class SkinVertex

@@ -1,7 +1,7 @@
 #ifndef _POLYMESH_DEFINE_H_
 #define _POLYMESH_DEFINE_H_
 
-namespace pm
+namespace pm2
 {
 
 static const int PTR_SIZE_DIFF		= (8 - sizeof(void *));

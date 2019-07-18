@@ -1,12 +1,12 @@
 #ifndef _POLYMESH_MESH_H_
 #define _POLYMESH_MESH_H_
 
-#include "polymesh/MeshType.h"
+#include "polymesh2/MeshType.h"
 
 #include <cu/cu_stl.h>
 #include <SM_Vector.h>
 
-namespace pm
+namespace pm2
 {
 
 class MeshTransform;

@@ -1,8 +1,8 @@
 #ifndef _POLYMESH_SKIN2_TRIANGLES_H_
 #define _POLYMESH_SKIN2_TRIANGLES_H_
 
-#include "polymesh/Skin2Vertex.h"
-#include "polymesh/Skin2Joint.h"
+#include "polymesh2/Skin2Vertex.h"
+#include "polymesh2/Skin2Joint.h"
 
 #include <cu/cu_stl.h>
 
@@ -10,7 +10,7 @@
 
 #include <stdint.h>
 
-namespace pm
+namespace pm2
 {
 
 class MeshTransform;

@@ -3,7 +3,7 @@
 
 #include <SM_Vector.h>
 
-namespace pm
+namespace pm2
 {
 
 class Skin2Joint

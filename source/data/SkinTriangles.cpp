@@ -1,11 +1,11 @@
-#include "polymesh/SkinTriangles.h"
-#include "polymesh/define.h"
+#include "polymesh2/SkinTriangles.h"
+#include "polymesh2/define.h"
 
 #include <memmgr/Allocator.h>
 
 #include <stddef.h>
 
-namespace pm
+namespace pm2
 {
 
 SkinTriangles::SkinTriangles()

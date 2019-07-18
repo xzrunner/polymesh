@@ -1,10 +1,10 @@
-#include "polymesh/Skin2TrisHelper.h"
-#include "polymesh/Skin2Triangles.h"
-#include "polymesh/MeshTransform.h"
+#include "polymesh2/Skin2TrisHelper.h"
+#include "polymesh2/Skin2Triangles.h"
+#include "polymesh2/MeshTransform.h"
 
 #include <SM_Calc.h>
 
-namespace pm
+namespace pm2
 {
 
 void Skin2TrisHelper::Dump(const Skin2Triangles& src,

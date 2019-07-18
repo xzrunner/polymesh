@@ -1,13 +1,13 @@
-#include "polymesh/Skin2Triangles.h"
-#include "polymesh/MeshTransform.h"
-#include "polymesh/define.h"
+#include "polymesh2/Skin2Triangles.h"
+#include "polymesh2/MeshTransform.h"
+#include "polymesh2/define.h"
 
 #include <memmgr/Allocator.h>
 
 #include <assert.h>
 #include <stddef.h>
 
-namespace pm
+namespace pm2
 {
 
 Skin2Triangles::Skin2Triangles()

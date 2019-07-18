@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>2.polymesh</ProjectName>
+    <ProjectName>2.polymesh2</ProjectName>
     <ProjectGuid>{748F2E41-4C8F-4C0F-A90A-26ECA6741A34}</ProjectGuid>
-    <RootNamespace>polymesh</RootNamespace>
+    <RootNamespace>polymesh2</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -43,12 +43,12 @@
     <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\polymesh\x86\Debug\</OutDir>
-    <IntDir>..\polymesh\x86\Debug\obj\</IntDir>
+    <OutDir>..\polymesh2\x86\Debug\</OutDir>
+    <IntDir>..\polymesh2\x86\Debug\obj\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\polymesh\x86\Release\</OutDir>
-    <IntDir>..\polymesh\x86\Release\obj\</IntDir>
+    <OutDir>..\polymesh2\x86\Release\</OutDir>
+    <IntDir>..\polymesh2\x86\Release\obj\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -91,24 +91,24 @@
     <ClCompile Include="..\..\..\source\middle\TrianglesHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\polymesh\Mesh.h" />
-    <ClInclude Include="..\..\..\include\polymesh\MeshTransform.h" />
-    <ClInclude Include="..\..\..\include\polymesh\MeshType.h" />
-    <ClInclude Include="..\..\..\include\polymesh\pm_define.h" />
-    <ClInclude Include="..\..\..\include\polymesh\PointsMesh.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Joint.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Mesh.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Triangles.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Skin2TrisHelper.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Skin2Vertex.h" />
-    <ClInclude Include="..\..\..\include\polymesh\SkinTriangles.h" />
-    <ClInclude Include="..\..\..\include\polymesh\SkinVertex.h" />
-    <ClInclude Include="..\..\..\include\polymesh\StripMesh.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Strips.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Triangles.h" />
-    <ClInclude Include="..\..\..\include\polymesh\TrianglesHelper.h" />
-    <ClInclude Include="..\..\..\include\polymesh\TrianglesMesh.h" />
-    <ClInclude Include="..\..\..\include\polymesh\Vertex.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Mesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\MeshTransform.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\MeshType.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\pm_define.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\PointsMesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Joint.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Mesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Triangles.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2TrisHelper.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Skin2Vertex.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\SkinTriangles.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\SkinVertex.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\StripMesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Strips.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Triangles.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\TrianglesHelper.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\TrianglesMesh.h" />
+    <ClInclude Include="..\..\..\include\polymesh2\Vertex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

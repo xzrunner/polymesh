@@ -1,13 +1,13 @@
 #ifndef _POLYMESH_SKIN_TRIANGLES_H_
 #define _POLYMESH_SKIN_TRIANGLES_H_
 
-#include "polymesh/SkinVertex.h"
+#include "polymesh2/SkinVertex.h"
 
 #include <cu/cu_stl.h>
 
 #include <memory>
 
-namespace pm
+namespace pm2
 {
 
 class SkinTriangles

@@ -1,13 +1,13 @@
 #ifndef _POLYMESH_TRIANGLES_MESH_H_
 #define _POLYMESH_TRIANGLES_MESH_H_
 
-#include "polymesh/Mesh.h"
-#include "polymesh/Triangles.h"
+#include "polymesh2/Mesh.h"
+#include "polymesh2/Triangles.h"
 
 #include <SM_Vector.h>
 #include <cu/cu_stl.h>
 
-namespace pm
+namespace pm2
 {
 
 class TrianglesMesh : public Mesh
